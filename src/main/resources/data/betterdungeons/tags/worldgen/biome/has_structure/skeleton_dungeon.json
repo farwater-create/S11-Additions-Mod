@@ -1,0 +1,9 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "mining_dimension:cave_biome",
+      "required": false
+    }
+  ]
+}

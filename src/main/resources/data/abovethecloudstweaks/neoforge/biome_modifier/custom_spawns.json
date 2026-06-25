@@ -1,0 +1,78 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#abovethecloudstweaks:is_land",
+  "spawners": [
+    {
+      "type": "illagerinvasion:firecaller",
+      "weight": 40,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "illagerinvasion:necromancer",
+      "weight": 40,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "illagerinvasion:alchemist",
+      "weight": 40,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "alexsmobs:murmur",
+      "weight": 60,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "alexsmobs:soul_vulture",
+      "weight": 40,
+      "minCount": 1,
+      "maxCount": 3
+    },
+    {
+      "type": "alexsmobs:guster",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "brazil_legends:capelobo",
+      "weight": 6,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "brazil_legends:mapinguari",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "brazil_legends:mapinguary",
+      "weight": 8,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "brazil_legends:cuca",
+      "weight": 10,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "cataclysm:draugr",
+      "weight": 70,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "cataclysm:elite_draugr",
+      "weight": 50,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
+}

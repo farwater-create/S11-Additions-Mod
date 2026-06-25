@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_spawn_costs",
+  "biomes": "#abovethecloudstweaks:is_land",
+  "entity_types": 
+    "brazil_legends:headless_mule"
+  ,
+  "spawn_cost": {
+    "energy_budget": 1.0,
+    "charge": 1.0
+  }
+}

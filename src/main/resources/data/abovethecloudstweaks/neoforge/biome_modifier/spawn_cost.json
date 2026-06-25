@@ -1,0 +1,22 @@
+{
+  "type": "neoforge:add_spawn_costs",
+  "biomes": "#abovethecloudstweaks:is_land",
+  "entity_types": [
+    "illagerinvasion:firecaller",
+    "illagerinvasion:necromancer",
+    "illagerinvasion:alchemist",
+    "alexsmobs:murmur",
+    "alexsmobs:soul_vulture",
+    "alexsmobs:guster",
+    "brazil_legends:capelobo",
+    "brazil_legends:mapinguari",
+    "brazil_legends:mapinguary",
+    "brazil_legends:cuca",
+    "cataclysm:draugr",
+    "cataclysm:elite_draugr"
+  ],
+  "spawn_cost": {
+    "energy_budget": 3.0,
+    "charge": 2.8
+  }
+}

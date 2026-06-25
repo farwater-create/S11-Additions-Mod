@@ -1,0 +1,16 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 5,
+    "separation": 1,
+    "spread_type": "linear",
+    "salt": 8527468,
+    "frequency": 1
+  },
+  "structures": [
+    {
+      "structure": "abovethecloudstweaks:land_geyser",
+      "weight": 1
+    }
+  ]
+}

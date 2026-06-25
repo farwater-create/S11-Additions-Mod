@@ -1,0 +1,75 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench, by Spudacious5705",
+	"texture_size": [64, 64],
+	"render_type": "cutout",
+	"textures": {
+		"tex": "abovethecloudstweaks:block/vent_texture",
+		"particle": "abovethecloudstweaks:block/vent_texture"
+	},
+	"elements": [
+		{
+			"name": "block",
+			"from": [0, 0, 0],
+			"to": [16, 13, 16],
+			"faces": {
+				"north": {"uv": [0, 8, 8, 14.5], "texture": "tex"},
+				"east": {"uv": [0, 8, 8, 14.5], "texture": "tex"},
+				"south": {"uv": [0, 8, 8, 14.5], "texture": "tex"},
+				"west": {"uv": [0, 8, 8, 14.5], "texture": "tex"},
+				"up": {"uv": [8, 8, 0, 0], "texture": "tex"},
+				"down": {"uv": [0, 0, 8, 8], "texture": "tex"}
+			}
+		},
+		{
+			"name": "stone_1",
+			"from": [1, 11, 4],
+			"to": [6, 15, 10],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [3, 12, 7]},
+			"faces": {
+				"north": {"uv": [10.5, 9, 13, 11], "texture": "tex"},
+				"east": {"uv": [10.5, 5, 13.5, 7], "texture": "tex"},
+				"south": {"uv": [10.5, 11, 13, 13], "texture": "tex"},
+				"west": {"uv": [10.5, 7, 13.5, 9], "texture": "tex"},
+				"up": {"uv": [10.5, 3, 8, 0], "texture": "tex"},
+				"down": {"uv": [10.5, 3, 8, 6], "texture": "tex"}
+			}
+		},
+		{
+			"name": "stone_2",
+			"from": [9, 11, 1],
+			"to": [14, 14, 7],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [13, 12, 4]},
+			"faces": {
+				"north": {"uv": [13.5, 0, 16, 1.5], "texture": "tex"},
+				"east": {"uv": [8, 13, 11, 14.5], "texture": "tex"},
+				"south": {"uv": [13.5, 1.5, 16, 3], "texture": "tex"},
+				"west": {"uv": [13, 9, 16, 10.5], "texture": "tex"},
+				"up": {"uv": [10.5, 9, 8, 6], "texture": "tex"},
+				"down": {"uv": [10.5, 9, 8, 12], "texture": "tex"}
+			}
+		},
+		{
+			"name": "stone_3",
+			"from": [6, 11.5, 10],
+			"to": [12, 14.5, 15],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 12, 13]},
+			"faces": {
+				"north": {"uv": [13, 10.5, 16, 12], "texture": "tex"},
+				"east": {"uv": [13.5, 3, 16, 4.5], "texture": "tex"},
+				"south": {"uv": [11, 13, 14, 14.5], "texture": "tex"},
+				"west": {"uv": [13.5, 4.5, 16, 6], "texture": "tex"},
+				"up": {"uv": [13.5, 2.5, 10.5, 0], "texture": "tex"},
+				"down": {"uv": [13.5, 2.5, 10.5, 5], "texture": "tex"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "vent_block",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}

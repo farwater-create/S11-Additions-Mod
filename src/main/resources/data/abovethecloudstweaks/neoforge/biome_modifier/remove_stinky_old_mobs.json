@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:remove_spawns",
+  "biomes": "#abovethecloudstweaks:is_land",
+  "entity_types": [
+    "minecraft:zombie",
+    "minecraft:zombie_villager",
+    "minecraft:skeleton",
+    "minecraft:spider",
+    "minecraft:creeper",
+    "alexsmobs:fly"
+  ]
+}

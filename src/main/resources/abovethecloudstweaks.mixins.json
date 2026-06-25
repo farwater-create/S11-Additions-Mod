@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.spudacious5705.abovethecloudstweaks.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CatagoryDespawnDistModifier",
+    "Despawn",
+    "Elytra",
+    "Fire",
+    "LegendsCapelobo",
+    "LegendsCuca",
+    "LegendsMapari",
+    "LegendsMapary",
+    "MakeVillagersEvil",
+    "PersistenceAccesssor",
+    "Portal"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
