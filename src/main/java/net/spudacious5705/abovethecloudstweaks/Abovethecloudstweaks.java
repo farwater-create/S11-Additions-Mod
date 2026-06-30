@@ -1,6 +1,7 @@
 package net.spudacious5705.abovethecloudstweaks;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
@@ -27,19 +28,30 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.spudacious5705.abovethecloudstweaks.WorldTeleport.CameraOverlay;
+import net.spudacious5705.abovethecloudstweaks.WorldTeleport.network.OverlayNetworking;
 import net.spudacious5705.abovethecloudstweaks.particles.*;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
+import tictim.paraglider.network.ClientPacketHandler;
 
 import java.util.function.Supplier;
+
+import static net.neoforged.neoforge.client.gui.VanillaGuiLayers.CAMERA_OVERLAYS;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Abovethecloudstweaks.MODID)
@@ -124,7 +136,7 @@ public class Abovethecloudstweaks {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        //todo addmeback! MobSpawnEventEdits.otherReg(modEventBus);
+        MobSpawnEventEdits.otherReg(modEventBus);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
@@ -184,6 +196,7 @@ public class Abovethecloudstweaks {
         LOGGER.info("HELLO from server starting");
     }
 
+
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = MODID, value = Dist.CLIENT)
     public static class ClientModEvents {
@@ -193,10 +206,6 @@ public class Abovethecloudstweaks {
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
-    }
-
-    @EventBusSubscriber(modid = MODID, value = net.neoforged.api.distmarker.Dist.CLIENT)
-    public static class ClientParticleEvents {
         @SubscribeEvent
         public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(UPDRAFT_PARTICLE_HOLDER.get(), UpdraftParticle.Provider::new);
@@ -206,5 +215,20 @@ public class Abovethecloudstweaks {
             event.registerSpriteSet(SURFACE_RIPPLES_PARTICLE_HOLDER.get(), SurfaceRipplesParticle.Provider::new);
             // Alternatively, replace with a custom TextureSheetParticle.Provider if you have one
         }
+        @SubscribeEvent
+        public static void registerGuiLayers(RegisterGuiLayersEvent event) {
+            event.registerAbove(CAMERA_OVERLAYS,
+                    ResourceLocation.fromNamespaceAndPath(MODID, "portal_overlay"),
+                CameraOverlay::renderOverlay
+        );
+        }
+        @SubscribeEvent
+        public static void clientTickers(ClientTickEvent.Post event) {
+            CameraOverlay.tick();
+        }
+        /*@SubscribeEvent
+        public static void onServerStarting(FMLLoadCompleteEvent event) {
+            CameraOverlay.clientLoaded();
+        }*/
     }
 }

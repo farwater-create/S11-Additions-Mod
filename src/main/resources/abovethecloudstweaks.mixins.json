@@ -8,12 +8,15 @@
     "Despawn",
     "Elytra",
     "Fire",
+    "GusterAlwaysSpawn",
     "LegendsCapelobo",
     "LegendsCuca",
     "LegendsMapari",
     "LegendsMapary",
     "MakeVillagersEvil",
     "PersistenceAccesssor",
+    "PlayerListTpTracker",
+    "PlayerTpTracker",
     "Portal"
   ],
   "client": [
