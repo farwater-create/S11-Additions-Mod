@@ -55,15 +55,23 @@ public class Abovethecloudstweaks {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
     public static final DeferredBlock<Block> VENT_BLOCK = BLOCKS.register("vent_block", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_SANDSTONE = BLOCKS.register("vent_sandstone", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_KAOLIN = BLOCKS.register("vent_kaolin", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_GRANITE = BLOCKS.register("vent_granite", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_CHERT = BLOCKS.register("vent_chert", VentBlock::new);
 
     public static final Supplier<BlockEntityType<VentEntity>> VENT_ENTITY =
             BLOCK_ENTITIES.register("vent_be",
                     () -> BlockEntityType.Builder.of(VentEntity::new,
-                            VENT_BLOCK.get()
+                            VENT_BLOCK.get(), VENT_SANDSTONE.get(), VENT_KAOLIN.get(), VENT_GRANITE.get(), VENT_CHERT.get()
                     ).build(null)
             );
 
     public static final DeferredItem<BlockItem> VENT_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("vent_block", VENT_BLOCK);
+    public static final DeferredItem<BlockItem> VENT_SANDSTONE_ITEM = ITEMS.registerSimpleBlockItem("vent_sandstone", VENT_SANDSTONE);
+    public static final DeferredItem<BlockItem> VENT_KAOLIN_ITEM = ITEMS.registerSimpleBlockItem("vent_kaolin", VENT_KAOLIN);
+    public static final DeferredItem<BlockItem> VENT_GRANITE_ITEM = ITEMS.registerSimpleBlockItem("vent_granite", VENT_GRANITE);
+    public static final DeferredItem<BlockItem> VENT_CHERT_ITEM = ITEMS.registerSimpleBlockItem("vent_chert", VENT_CHERT);
 
 
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
@@ -128,7 +136,13 @@ public class Abovethecloudstweaks {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) event.accept(VENT_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(VENT_BLOCK_ITEM);
+            event.accept(VENT_SANDSTONE_ITEM);
+            event.accept(VENT_KAOLIN_ITEM);
+            event.accept(VENT_GRANITE_ITEM);
+            event.accept(VENT_CHERT_ITEM);
+        }
     }
 
     /*@EventBusSubscriber(modid = MODID)
