@@ -22,7 +22,6 @@ import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -67,7 +66,7 @@ public class Abovethecloudstweaks {
                     ).build(null)
             );
 
-    public static final DeferredItem<BlockItem> VENT_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("vent_block", VENT_BLOCK);
+    public static final DeferredItem<BlockItem> VENT_STONE_ITEM = ITEMS.registerSimpleBlockItem("vent_stone", VENT_BLOCK);
     public static final DeferredItem<BlockItem> VENT_SANDSTONE_ITEM = ITEMS.registerSimpleBlockItem("vent_sandstone", VENT_SANDSTONE);
     public static final DeferredItem<BlockItem> VENT_KAOLIN_ITEM = ITEMS.registerSimpleBlockItem("vent_kaolin", VENT_KAOLIN);
     public static final DeferredItem<BlockItem> VENT_GRANITE_ITEM = ITEMS.registerSimpleBlockItem("vent_granite", VENT_GRANITE);
@@ -137,7 +136,7 @@ public class Abovethecloudstweaks {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(VENT_BLOCK_ITEM);
+            event.accept(VENT_STONE_ITEM);
             event.accept(VENT_SANDSTONE_ITEM);
             event.accept(VENT_KAOLIN_ITEM);
             event.accept(VENT_GRANITE_ITEM);
