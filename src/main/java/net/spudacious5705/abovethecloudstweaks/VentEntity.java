@@ -6,7 +6,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySelector;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,11 +13,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import tictim.paraglider.api.ParagliderAPI;
 import tictim.paraglider.api.movement.Movement;
 
 import java.util.List;
@@ -74,7 +71,6 @@ public class VentEntity extends BlockEntity {
     };
 
     public static void launch_air(List<Entity> entities, int heightThis){
-        int launchModifierHeight = 1-((heightThis-64)/256);
 
         for (Entity entityToBeLaunched : entities) {
             Vec3 entityVelocity = entityToBeLaunched.getDeltaMovement();
@@ -106,8 +102,6 @@ public class VentEntity extends BlockEntity {
     }
 
     public static void launch_water(List<Entity> entities, int heightThis){
-
-        int depthThis = 62-heightThis;
 
         for (Entity entityToBeLaunched : entities) {
             Vec3 entityVelocity = entityToBeLaunched.getDeltaMovement();
@@ -185,14 +179,14 @@ public class VentEntity extends BlockEntity {
             }
             if (soundTime % 40L > 1L) {
                 entity.lastSoundTick = gameTime;
-                /*float f = 0.7F + 0.4F * entity.random.nextFloat();
+                float f = 0.7F + 0.4F * entity.random.nextFloat();
                 float f1 = 0.8F + 0.2F * entity.random.nextFloat();
                 level.playLocalSound(
                         (double)pos.getX() + 0.5,
                         (double)pos.getY() + 0.5,
                         (double)pos.getZ() + 0.5,
-                        SoundEvents.BREEZE_WHIRL, SoundSource.BLOCKS,
-                        f1, f, false);*/
+                        SoundEvents.BUBBLE_COLUMN_WHIRLPOOL_INSIDE, SoundSource.BLOCKS,
+                        f1, f, false);
             }
 
         }

@@ -1,10 +1,8 @@
 package net.spudacious5705.abovethecloudstweaks.mixin;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.spudacious5705.abovethecloudstweaks.WorldTeleport.IPlayerWorldTp;
 import net.spudacious5705.abovethecloudstweaks.WorldTeleport.WorldTransferSettings;
 import net.spudacious5705.abovethecloudstweaks.WorldTeleport.network.OverlayNetworking;
@@ -25,13 +23,13 @@ public abstract class PlayerTpTracker implements IPlayerWorldTp {
     @Shadow
     public abstract ServerLevel serverLevel();
 
-    @Inject(
+    /*@Inject(
             method = "<init>",
             at = @At("TAIL")
     )
     private void init(CallbackInfo ci) {
         //aboveTheCloudsTweaks$updateWorldTpConf();
-    }
+    }*/
 
     @Inject(
             method = "tick",

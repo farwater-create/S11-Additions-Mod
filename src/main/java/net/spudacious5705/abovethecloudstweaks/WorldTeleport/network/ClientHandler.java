@@ -1,6 +1,5 @@
 package net.spudacious5705.abovethecloudstweaks.WorldTeleport.network;
 
-import net.minecraft.client.Minecraft;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.spudacious5705.abovethecloudstweaks.WorldTeleport.CameraOverlay;
 
