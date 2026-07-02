@@ -1,0 +1,16 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 10,
+    "separation": 2,
+    "spread_type": "linear",
+    "salt": 8647258,
+    "frequency": 1
+  },
+  "structures": [
+    {
+      "structure": "abovethecloudstweaks:warm_sea_vent",
+      "weight": 1
+    }
+  ]
+}

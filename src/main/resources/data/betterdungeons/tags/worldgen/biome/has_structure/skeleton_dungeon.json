@@ -2,7 +2,23 @@
   "replace": true,
   "values": [
     {
-      "id": "mining_dimension:cave_biome",
+      "id": "ddu:caves",
+      "required": false
+    },
+    {
+      "id": "ddu:dripstone_caves_copy",
+      "required": false
+    },
+    {
+      "id": "galosphere:crystal_canyons",
+      "required": false
+    },
+    {
+      "id": "galosphere:lichen_caves",
+      "required": false
+    },
+    {
+      "id": "galosphere:pink_salt_caves",
       "required": false
     }
   ]

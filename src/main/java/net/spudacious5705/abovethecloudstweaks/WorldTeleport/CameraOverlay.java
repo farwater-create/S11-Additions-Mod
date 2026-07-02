@@ -30,7 +30,7 @@ public class CameraOverlay {
         RenderSystem.disableDepthTest();
         RenderSystem.depthMask(false);
         RenderSystem.enableBlend();
-        guiGraphics.setColor(1.0F, 1.0F, 1.0F, strLerp*0.8f);
+        guiGraphics.setColor(1.0F, 1.0F, 1.0F, strLerp*0.7f);
         guiGraphics.blit(0, 0, -90, guiGraphics.guiWidth(), guiGraphics.guiHeight(), textureatlassprite);
         RenderSystem.disableBlend();
         RenderSystem.depthMask(true);

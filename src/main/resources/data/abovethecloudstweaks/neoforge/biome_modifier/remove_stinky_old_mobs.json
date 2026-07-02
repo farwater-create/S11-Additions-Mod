@@ -3,6 +3,7 @@
   "biomes": "#abovethecloudstweaks:is_land",
   "entity_types": [
     "minecraft:zombie",
+    "minecraft:husk",
     "minecraft:zombie_villager",
     "minecraft:skeleton",
     "minecraft:spider",

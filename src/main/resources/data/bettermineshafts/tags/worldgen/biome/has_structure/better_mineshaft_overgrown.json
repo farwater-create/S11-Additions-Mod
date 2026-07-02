@@ -1,8 +1,8 @@
 {
-  "replace": false,
+  "replace": true,
   "values": [
     {
-      "id": "mining_dimension:cave_biome",
+      "id": "ddu:lush_caves_copy",
       "required": false
     }
   ]
