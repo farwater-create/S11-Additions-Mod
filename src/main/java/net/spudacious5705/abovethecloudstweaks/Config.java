@@ -16,11 +16,14 @@ public class Config {
     private static final ModConfigSpec.DoubleValue WATER_SPEED_INCREASE_FRACTION_CFG = BUILDER.comment("Essentially, the rate at which an entity is brought up to max velocity")
             .defineInRange("water_speed_increase_fraction", 0.4, 0.001, 1.0);
 
+    private static final ModConfigSpec.IntValue LAND_VENT_LAUNCH_HEIGHT_CFG = BUILDER.comment("The height an entity is launched when standing on a land vent")
+            .defineInRange("land_vent_launch_height", 32, 1, 512);
 
     static final ModConfigSpec SPEC = BUILDER.build();
 
     public static float WATER_MAX_LAUNCH_SPEED;
     public static float WATER_SPEED_INCREASE_FRACTION;
+    public static int ventDraughtHeight;
 
 
 
@@ -30,5 +33,6 @@ public class Config {
         WATER_MAX_LAUNCH_SPEED = (float) foo;
         foo = WATER_SPEED_INCREASE_FRACTION_CFG.get();
         WATER_SPEED_INCREASE_FRACTION = (float) foo;
+        ventDraughtHeight = LAND_VENT_LAUNCH_HEIGHT_CFG.get();
     }
 }

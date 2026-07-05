@@ -21,14 +21,11 @@ import tictim.paraglider.api.movement.Movement;
 import java.util.List;
 import java.util.function.Predicate;
 
-import static net.spudacious5705.abovethecloudstweaks.Config.WATER_MAX_LAUNCH_SPEED;
-import static net.spudacious5705.abovethecloudstweaks.Config.WATER_SPEED_INCREASE_FRACTION;
+import static net.spudacious5705.abovethecloudstweaks.Config.*;
 
 public class VentEntity extends BlockEntity {
 
     protected final RandomSource random;
-
-    static final int ventDraughtHeight = 22;
 
     private static final Predicate<Entity> EFFECT_PREDICATE =
             EntitySelector.NO_SPECTATORS.and(EntitySelector.ENTITY_STILL_ALIVE);

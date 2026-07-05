@@ -53,7 +53,7 @@ public class Abovethecloudstweaks {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
-    public static final DeferredBlock<Block> VENT_BLOCK = BLOCKS.register("vent_block", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_BLOCK = BLOCKS.register("vent_stone", VentBlock::new);
     public static final DeferredBlock<Block> VENT_SANDSTONE = BLOCKS.register("vent_sandstone", VentBlock::new);
     public static final DeferredBlock<Block> VENT_KAOLIN = BLOCKS.register("vent_kaolin", VentBlock::new);
     public static final DeferredBlock<Block> VENT_GRANITE = BLOCKS.register("vent_granite", VentBlock::new);
