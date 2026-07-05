@@ -1,7 +1,11 @@
 {
   "conditions": {
     "block": [
-      "abovethecloudstweaks:vent_block"
+      "abovethecloudstweaks:vent_stone",
+      "abovethecloudstweaks:vent_kaolin",
+      "abovethecloudstweaks:vent_sandstone",
+      "abovethecloudstweaks:vent_granite",
+      "abovethecloudstweaks:vent_chert"
     ]
   }
 }
