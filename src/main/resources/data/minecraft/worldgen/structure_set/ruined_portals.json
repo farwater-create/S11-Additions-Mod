@@ -1,10 +1,16 @@
 {
+  "structures": [
+    {
+      "structure": "minecraft:nether_fossil",
+      "weight": 1
+    }
+  ],
   "placement": {
     "type": "minecraft:random_spread",
+    "spacing": 512,
+    "separation": 256,
+    "spread_type": "linear",
     "salt": 0,
-    "separation": 512,
-    "spacing": 512
-  },
-  "structures": [
-  ]
+    "frequency": 0
+  }
 }
