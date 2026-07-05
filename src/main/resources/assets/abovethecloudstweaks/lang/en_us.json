@@ -1,5 +1,13 @@
 {
-  "block.abovethecloudstweaks.vent_block": "Vent",
-  "item.abovethecloudstweaks.vent_block": "Vent Block",
+  "block.abovethecloudstweaks.vent_block": "Stone Vent",
+  "item.abovethecloudstweaks.vent_block": "Stone Vent",
+  "block.abovethecloudstweaks.vent_sandstone": "Sandstone Vent",
+  "item.abovethecloudstweaks.vent_sandstone": "Sandstone Vent",
+  "block.abovethecloudstweaks.vent_kaolin": "Kaolin Vent",
+  "item.abovethecloudstweaks.vent_kaolin": "Kaolin Vent",
+  "block.abovethecloudstweaks.vent_granite": "Granite Vent",
+  "item.abovethecloudstweaks.vent_granite": "Granite Vent",
+  "block.abovethecloudstweaks.vent_chert": "Chert Vent",
+  "item.abovethecloudstweaks.vent_chert": "Chert Vent",
   "effect.abovethecloudstweaks.launched": "Launched"
 }
