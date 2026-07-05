@@ -1,6 +1,6 @@
 {
-  "block.abovethecloudstweaks.vent_block": "Stone Vent",
-  "item.abovethecloudstweaks.vent_block": "Stone Vent",
+  "block.abovethecloudstweaks.vent_stone": "Stone Vent",
+  "item.abovethecloudstweaks.vent_stone": "Stone Vent",
   "block.abovethecloudstweaks.vent_sandstone": "Sandstone Vent",
   "item.abovethecloudstweaks.vent_sandstone": "Sandstone Vent",
   "block.abovethecloudstweaks.vent_kaolin": "Kaolin Vent",
