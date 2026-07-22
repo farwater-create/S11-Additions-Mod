@@ -21,8 +21,7 @@
     "minecraft:flower_forest",
     "minecraft:birch_forest",
     "minecraft:dark_forest",
-    "minecraft:savanna_plateau",
-    "minecraft:savanna",
+
     "minecraft:badlands",
     "minecraft:desert",
     "minecraft:wooded_badlands",
@@ -34,7 +33,7 @@
     "minecraft:old_growth_birch_forest",
 
     "minecraft:eroded_badlands",
-    "minecraft:windswept_savanna",
+
     "minecraft:cherry_grove",
     "minecraft:frozen_peaks"
   ]

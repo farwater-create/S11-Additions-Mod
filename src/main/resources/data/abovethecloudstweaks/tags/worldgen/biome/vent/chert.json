@@ -1,13 +1,15 @@
 {
   "values": [
     "natures_spirit:chaparral",
-    "natures_spirit:alpine_highlands",
     "natures_spirit:arid_highlands",
     "natures_spirit:woody_highlands",
     "natures_spirit:shrubby_highlands",
     "natures_spirit:blooming_highlands",
+    "natures_spirit:blooming_dunes",
     "natures_spirit:oak_savanna",
     "natures_spirit:arid_savanna",
-    "natures_spirit:lively_dunes"
+    "natures_spirit:lively_dunes",
+    "natures_spirit:stratified_desert",
+    "natures_spirit:scorched_dunes"
   ]
 }

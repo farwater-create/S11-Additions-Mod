@@ -9,23 +9,23 @@
           "biome": "ddu:caves",
           "parameters": {
             "temperature": 0,
-            "humidity": 0,
+            "humidity": -0.4,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": 0,
-            "depth": 0,
+            "depth": 0.2,
             "offset": 0.5
           }
         },
         {
           "biome": "ddu:lush_caves_copy",
           "parameters": {
-            "temperature": 0,
-            "humidity": 1,
+            "temperature": 0.4,
+            "humidity": 0.4,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": 0,
-            "depth": -1,
+            "depth": -1.2,
             "offset": 0
           }
         },
@@ -45,7 +45,7 @@
           "biome": "ddu:dripstone_caves_copy",
           "parameters": {
             "temperature": 0,
-            "humidity": -1,
+            "humidity": 0.8,
             "continentalness": 0,
             "erosion": 0,
             "weirdness": 0,
@@ -61,19 +61,19 @@
             "continentalness": 0,
             "erosion": 1,
             "weirdness": 0,
-            "depth": 0,
+            "depth": -1,
             "offset": 0
           }
         },
         {
           "biome": "galosphere:lichen_caves",
           "parameters": {
-            "temperature": 0,
-            "humidity": 0,
+            "temperature": -0.4,
+            "humidity": 0.4,
             "continentalness": 0,
-            "erosion": -1,
-            "weirdness": 0,
-            "depth": 0,
+            "erosion": -0.6,
+            "weirdness": 0.6,
+            "depth": 0.1,
             "offset": 0
           }
         },
