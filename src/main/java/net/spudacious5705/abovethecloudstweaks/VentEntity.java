@@ -1,5 +1,8 @@
 package net.spudacious5705.abovethecloudstweaks;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.sounds.SimpleSoundInstance;
+import net.minecraft.client.resources.sounds.SoundInstance;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
@@ -153,14 +156,14 @@ public class VentEntity extends BlockEntity {
             }
             if (soundTime > 10L) {
                 entity.lastSoundTick = gameTime + entity.random.nextIntBetweenInclusive(5, 12);
-                float f = 0.7F + 0.4F * entity.random.nextFloat();
-                float f1 = 2.8F + 1.2F * entity.random.nextFloat();
+                float pitch = 0.5F + 0.4F * entity.random.nextFloat();
+                float volume = 0.3F + 0.4F * entity.random.nextFloat();
                 level.playLocalSound(
                         (double)pos.getX() + 0.5,
                         (double)pos.getY() + 0.5,
                         (double)pos.getZ() + 0.5,
-                        SoundEvents.BREEZE_WHIRL, SoundSource.BLOCKS,
-                        f1, f, false);
+                        SoundEvents.BREEZE_IDLE_GROUND, SoundSource.BLOCKS,
+                        volume, pitch, false);
             }
 
         } else {
@@ -176,14 +179,24 @@ public class VentEntity extends BlockEntity {
             }
             if (soundTime % 40L > 1L) {
                 entity.lastSoundTick = gameTime;
-                float f = 0.7F + 0.4F * entity.random.nextFloat();
-                float f1 = 0.8F + 0.2F * entity.random.nextFloat();
+                float pitch = 0.7F + 0.4F * entity.random.nextFloat();
+                float volume = 0.4F + 0.2F * entity.random.nextFloat();
                 level.playLocalSound(
                         (double)pos.getX() + 0.5,
                         (double)pos.getY() + 0.5,
                         (double)pos.getZ() + 0.5,
-                        SoundEvents.BUBBLE_COLUMN_WHIRLPOOL_INSIDE, SoundSource.BLOCKS,
-                        f1, f, false);
+                        SoundEvents.BUBBLE_COLUMN_WHIRLPOOL_AMBIENT, SoundSource.BLOCKS,
+                        volume, pitch, false);
+
+                if(entity.random.nextFloat() > 0.7f) return;
+                pitch = 0.1F + 0.4F * entity.random.nextFloat();
+                volume = 0.4F + 0.2F * entity.random.nextFloat();
+                level.playLocalSound(
+                        (double)pos.getX() + 0.5,
+                        62,
+                        (double)pos.getZ() + 0.5,
+                        SoundEvents.BUBBLE_COLUMN_WHIRLPOOL_AMBIENT, SoundSource.BLOCKS,
+                        volume, pitch, false);
             }
 
         }
