@@ -59,12 +59,18 @@ public class Abovethecloudstweaks {
     public static final DeferredBlock<Block> VENT_GRANITE = BLOCKS.register("vent_granite", VentBlock::new);
     public static final DeferredBlock<Block> VENT_CHERT = BLOCKS.register("vent_chert", VentBlock::new);
     public static final DeferredBlock<Block> VENT_ANDESITE = BLOCKS.register("vent_andesite", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_TERRACOTTA = BLOCKS.register("vent_terracotta", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_TRAVERTINE = BLOCKS.register("vent_travertine", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_PINK_SANDSTONE = BLOCKS.register("vent_pink_sandstone", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_RED_SANDSTONE = BLOCKS.register("vent_red_sandstone", VentBlock::new);
+    public static final DeferredBlock<Block> VENT_CHALK = BLOCKS.register("vent_chalk", VentBlock::new);
 
     public static final Supplier<BlockEntityType<VentEntity>> VENT_ENTITY =
             BLOCK_ENTITIES.register("vent_be",
                     () -> BlockEntityType.Builder.of(VentEntity::new,
                             VENT_BLOCK.get(), VENT_SANDSTONE.get(), VENT_KAOLIN.get(), VENT_GRANITE.get(),
-                            VENT_CHERT.get(), VENT_ANDESITE.get()
+                            VENT_CHERT.get(), VENT_ANDESITE.get(), VENT_TERRACOTTA.get(), VENT_TRAVERTINE.get(),
+                            VENT_PINK_SANDSTONE.get(), VENT_RED_SANDSTONE.get(), VENT_CHALK.get()
                     ).build(null)
             );
 
@@ -74,6 +80,11 @@ public class Abovethecloudstweaks {
     public static final DeferredItem<BlockItem> VENT_GRANITE_ITEM = ITEMS.registerSimpleBlockItem("vent_granite", VENT_GRANITE);
     public static final DeferredItem<BlockItem> VENT_CHERT_ITEM = ITEMS.registerSimpleBlockItem("vent_chert", VENT_CHERT);
     public static final DeferredItem<BlockItem> VENT_ANDESITE_ITEM = ITEMS.registerSimpleBlockItem("vent_andesite", VENT_ANDESITE);
+    public static final DeferredItem<BlockItem> VENT_TERRACOTTA_ITEM = ITEMS.registerSimpleBlockItem("vent_terracotta", VENT_TERRACOTTA);
+    public static final DeferredItem<BlockItem> VENT_TRAVERTINE_ITEM = ITEMS.registerSimpleBlockItem("vent_travertine", VENT_TRAVERTINE);
+    public static final DeferredItem<BlockItem> VENT_PINK_SANDSTONE_ITEM = ITEMS.registerSimpleBlockItem("vent_pink_sandstone", VENT_PINK_SANDSTONE);
+    public static final DeferredItem<BlockItem> VENT_RED_SANDSTONE_ITEM = ITEMS.registerSimpleBlockItem("vent_red_sandstone", VENT_RED_SANDSTONE);
+    public static final DeferredItem<BlockItem> VENT_CHALK_ITEM = ITEMS.registerSimpleBlockItem("vent_chalk", VENT_CHALK);
 
 
     public static final DeferredRegister<MobEffect> MOB_EFFECTS =
@@ -145,6 +156,12 @@ public class Abovethecloudstweaks {
             event.accept(VENT_GRANITE_ITEM);
             event.accept(VENT_CHERT_ITEM);
             event.accept(VENT_ANDESITE_ITEM);
+            event.accept(VENT_TERRACOTTA_ITEM);
+            event.accept(VENT_TRAVERTINE_ITEM);
+            event.accept(VENT_PINK_SANDSTONE_ITEM);
+            event.accept(VENT_RED_SANDSTONE_ITEM);
+            event.accept(VENT_CHALK_ITEM);
+
         }
     }
 

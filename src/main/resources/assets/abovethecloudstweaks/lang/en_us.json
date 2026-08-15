@@ -11,5 +11,15 @@
   "item.abovethecloudstweaks.vent_chert": "Chert Vent",
   "block.abovethecloudstweaks.vent_andesite": "Andesite Vent",
   "item.abovethecloudstweaks.vent_andesite": "Andesite Vent",
+  "block.abovethecloudstweaks.vent_travertine": "Travertine Vent",
+  "item.abovethecloudstweaks.vent_travertine": "Travertine Vent",
+  "block.abovethecloudstweaks.vent_terracotta": "Terracotta Vent",
+  "item.abovethecloudstweaks.vent_terracotta": "Terracotta Vent",
+  "block.abovethecloudstweaks.vent_pink_sandstone": "Pink Sandstone Vent",
+  "item.abovethecloudstweaks.vent_pink_sandstone": "Pink Sandstone Vent",
+  "block.abovethecloudstweaks.chalk": "Chalk Vent",
+  "item.abovethecloudstweaks.chalk": "Chalk Vent",
+  "block.abovethecloudstweaks.vent_red_sandstone": "Red Sandstone Vent",
+  "item.abovethecloudstweaks.vent_red_sandstone": "Red Sandstone Vent",
   "effect.abovethecloudstweaks.launched": "Launched"
 }

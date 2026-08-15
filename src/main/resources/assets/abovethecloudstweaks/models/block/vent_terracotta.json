@@ -1,0 +1,7 @@
+{
+  "parent": "abovethecloudstweaks:block/vent_model",
+  "textures": {
+    "tex": "abovethecloudstweaks:block/vent_terracotta",
+    "particle": "abovethecloudstweaks:block/vent_terracotta"
+  }
+}
