@@ -18,7 +18,8 @@
     "PersistenceAccesssor",
     "PlayerListTpTracker",
     "PlayerTpTracker",
-    "Portal"
+    "Portal",
+    "AdvancedWeatherFix"
   ],
   "client": [
   ],
