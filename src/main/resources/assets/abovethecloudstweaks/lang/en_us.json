@@ -22,5 +22,7 @@
   "block.abovethecloudstweaks.vent_red_sandstone": "Red Sandstone Vent",
   "item.abovethecloudstweaks.vent_red_sandstone": "Red Sandstone Vent",
   "effect.abovethecloudstweaks.launched": "Launched",
-  "item.advancedweather.mercury_bucket": "Mercury Bucket (tasty)"
+  "item.advancedweather.mercury_bucket": "Mercury Bucket (tasty)",
+  "block.abovethecloudstweaks.tractor_beam": "Tractor Beam",
+  "item.abovethecloudstweaks.tractor_beam": "Tractor Beam"
 }

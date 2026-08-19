@@ -53,6 +53,8 @@ public class Abovethecloudstweaks {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
+    public static final DeferredBlock<Block> TRACTOR_BEAM_BLOCK = BLOCKS.register("tractor_beam", TractorBeamBlock::new);
+
     public static final DeferredBlock<Block> VENT_BLOCK = BLOCKS.register("vent_stone", VentBlock::new);
     public static final DeferredBlock<Block> VENT_SANDSTONE = BLOCKS.register("vent_sandstone", VentBlock::new);
     public static final DeferredBlock<Block> VENT_KAOLIN = BLOCKS.register("vent_kaolin", VentBlock::new);
@@ -73,6 +75,8 @@ public class Abovethecloudstweaks {
                             VENT_PINK_SANDSTONE.get(), VENT_RED_SANDSTONE.get(), VENT_CHALK.get()
                     ).build(null)
             );
+
+    public static final DeferredItem<BlockItem> TRACTOR_BEAM_ITEM = ITEMS.registerSimpleBlockItem("tractor_beam", TRACTOR_BEAM_BLOCK);
 
     public static final DeferredItem<BlockItem> VENT_STONE_ITEM = ITEMS.registerSimpleBlockItem("vent_stone", VENT_BLOCK);
     public static final DeferredItem<BlockItem> VENT_SANDSTONE_ITEM = ITEMS.registerSimpleBlockItem("vent_sandstone", VENT_SANDSTONE);
@@ -150,6 +154,7 @@ public class Abovethecloudstweaks {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(TRACTOR_BEAM_ITEM);
             event.accept(VENT_STONE_ITEM);
             event.accept(VENT_SANDSTONE_ITEM);
             event.accept(VENT_KAOLIN_ITEM);
