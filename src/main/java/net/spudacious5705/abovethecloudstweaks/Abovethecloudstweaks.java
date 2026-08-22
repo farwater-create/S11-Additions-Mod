@@ -100,7 +100,7 @@ public class Abovethecloudstweaks {
         DeferredRegister.create(BuiltInRegistries.PARTICLE_TYPE, MODID);
 
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> UPDRAFT_PARTICLE_HOLDER =
-        PARTICLE_TYPES.register("updraft_particle", () -> new SimpleParticleType(false));
+        PARTICLE_TYPES.register("updraft_particle", () -> new SimpleParticleType(true));
 
     public static SimpleParticleType UPDRAFT_PARTICLE;
 
@@ -117,7 +117,7 @@ public class Abovethecloudstweaks {
     public static SimpleParticleType BREEZE_WHIRL_PARTICLE;
 
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SURFACE_RIPPLES_PARTICLE_HOLDER =
-            PARTICLE_TYPES.register("surface_ripples", () -> new SimpleParticleType(false));
+            PARTICLE_TYPES.register("surface_ripples", () -> new SimpleParticleType(true));
     public static SimpleParticleType SURFACE_RIPPLES_PARTICLE;
 
 

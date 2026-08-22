@@ -107,14 +107,24 @@ public class UpdraftParticle extends TextureSheetParticle {
         }
     }
 
-    /*
-    @Override
-    public void render(VertexConsumer p_107678_, Camera p_107679_, float p_107680_) {
-        this.renderRotatedQuad(p_107678_, p_107679_, new Quaternionf(), p_107680_);
-    }*/
 
     @Override
-    protected void renderRotatedQuad(VertexConsumer vCons, Quaternionf quat, float x, float y, float z, float d) {
+    public void render(VertexConsumer vCons, Camera camera, float d) {
+        Vec3 vec3 = camera.getPosition();
+        float f = (float)(Mth.lerp((double)d, this.xo, this.x) - vec3.x());
+        float f1 = (float)(Mth.lerp((double)d, this.yo, this.y) - vec3.y());
+        float f2 = (float)(Mth.lerp((double)d, this.zo, this.z) - vec3.z());
+
+        Quaternionf quat = new Quaternionf();
+        this.getFacingCameraMode().setRotation(quat, camera, d);
+        if (this.roll != 0.0F) {
+            quat.rotateZ(Mth.lerp(d, this.oRoll, this.roll));
+        }
+
+        renderRotatedQuadCustom(vCons, quat, f,f1,f2,d);
+    }
+
+    protected void renderRotatedQuadCustom(VertexConsumer vCons, Quaternionf quat, float x, float y, float z, float d) {
         float f = this.getQuadSize(d);
         float f1 = this.getU0();
         float f2 = this.getU1();
