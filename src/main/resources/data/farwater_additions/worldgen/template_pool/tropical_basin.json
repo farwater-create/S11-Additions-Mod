@@ -1,0 +1,81 @@
+{
+  "name": "farwater_additions:tropical_basin",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tropical_basin/vent_5",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tropical_basin/vent_4",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tropical_basin/vent_3",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tropical_basin/vent_2",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tropical_basin/vent_1",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "minecraft:empty"
+}

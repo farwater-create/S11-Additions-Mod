@@ -1,0 +1,276 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 5,
+    "separation": 1,
+    "spread_type": "linear",
+    "salt": 8527468,
+    "frequency": 1
+  },
+  "structures": [
+    {
+      "structure": "farwater_additions:alpine",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:arid_highlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:arid_savanna",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:aspen_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:badlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:bamboo_wetlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:beach",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:blooming_highlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:blooming_sugi_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:boreal_taiga",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:carnation_fields",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:cedar_thicket",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:chaparral",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:cherry_grove",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:cypress_fields",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:desert",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:drylands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:dunes",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:dusty_slopes",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:eroded_badlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:fir_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:floral_ridges",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:flower_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:flowering_shrubland",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:golden_wilds",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:grassy",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:grassy_hills",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:jungle",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:lavender_fields",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:mangrove_swamp",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:maple_woodlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:marsh",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:meadow",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:mushroom_fields",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:oak_savanna",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:old_growth_taiga",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:peaks",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:red_peaks",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:redwood_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:savanna",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:scorched_dunes",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:shrubby_highlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:shrubland",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:sleeted_slopes",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:snowy_beach",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:snowy_fir_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:snowy_plains",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:snowy_redwood_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:snowy_taiga",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:sparse_tropical_woods",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:stony_peaks",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:stratified_desert",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:sugi_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:sunflower_plains",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:swamp",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:taiga",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:tropical_basin",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:tropical_woods",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:tundra",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:white_cliffs",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:windswept_savanna",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:wisteria_forest",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:wooded_badlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:wooded_drylands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:woody_highlands",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:xeric_plains",
+      "weight": 1
+    }
+  ]
+}

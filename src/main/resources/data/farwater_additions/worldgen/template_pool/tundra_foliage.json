@@ -1,0 +1,96 @@
+{
+  "name": "farwater_additions:tundra_foliage",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tundra/foliage_6",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tundra/foliage_5",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tundra/foliage_4",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tundra/foliage_3",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tundra/foliage_2",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:tundra/foliage_1",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "minecraft:empty"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "farwater_additions:boreal_taiga_foliage",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:boreal_taiga/foliage_4",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:boreal_taiga/foliage_3",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:boreal_taiga/foliage_2",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:boreal_taiga/foliage_1",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "minecraft:empty"
+}

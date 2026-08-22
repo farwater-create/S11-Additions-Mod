@@ -1,0 +1,81 @@
+{
+  "name": "farwater_additions:lavender_fields",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:lavender_fields/vent_5",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:lavender_fields/vent_4",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:lavender_fields/vent_3",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:lavender_fields/vent_2",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:lavender_fields/vent_1",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "minecraft:empty"
+}

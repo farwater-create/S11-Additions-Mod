@@ -1,0 +1,81 @@
+{
+  "name": "farwater_additions:sparse_tropical_woods",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:sparse_tropical_woods/vent_5",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:sparse_tropical_woods/vent_4",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:sparse_tropical_woods/vent_3",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:sparse_tropical_woods/vent_2",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "farwater_additions:sparse_tropical_woods/vent_1",
+        "processors": {
+          "processors": [
+            {
+              "processor_type": "minecraft:nop"
+            }
+          ]
+        }
+      },
+      "weight": 1
+    }
+  ],
+  "fallback": "minecraft:empty"
+}

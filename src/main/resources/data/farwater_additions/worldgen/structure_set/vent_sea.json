@@ -1,0 +1,24 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 10,
+    "separation": 2,
+    "spread_type": "linear",
+    "salt": 8647258,
+    "frequency": 1
+  },
+  "structures": [
+    {
+      "structure": "farwater_additions:ocean",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:lukewarm_ocean",
+      "weight": 1
+    },
+    {
+      "structure": "farwater_additions:warm_ocean",
+      "weight": 1
+    }
+  ]
+}
