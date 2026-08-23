@@ -16,7 +16,7 @@
     "cataclysm:elite_draugr"
   ],
   "spawn_cost": {
-    "energy_budget": 5.0,
-    "charge": 4.8
+    "energy_budget": 8.0,
+    "charge": 7.8
   }
 }
