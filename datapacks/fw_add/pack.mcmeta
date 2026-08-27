@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "adds some structures",
+    "pack_format": 48,
+    "supported_formats": {
+      "max_inclusive": 105,
+      "min_inclusive": 0
+    }
+  }
+}

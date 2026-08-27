@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_spawn_costs",
+  "biomes": "#abovethecloudstweaks:is_land",
+  "entity_types": [
+    "cataclysm:lionfish",
+    "cataclysm:deepling_warlock",
+    "cataclysm:deepling_brute",
+    "cataclysm:deepling_angler",
+    "cataclysm:deepling",
+    "alexsmobs:guster"
+  ],
+  "spawn_cost": {
+    "energy_budget": 8.0,
+    "charge": 7.8
+  }
+}

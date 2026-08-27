@@ -9,7 +9,7 @@
   "terrain_adaptation": "beard_thin",
   "spawn_overrides": {},
   "start_pool": "farwater_additions:grassy_hills",
-  "size": 10,
+  "size": 2,
   "start_height": {
     "absolute": 0
   },
