@@ -1,6 +1,8 @@
 package net.spudacious5705.abovethecloudstweaks;
 
 import com.github.L_Ender.cataclysm.init.ModEntities;
+import com.github.alexthe666.alexsmobs.AlexsMobs;
+import com.github.alexthe666.alexsmobs.entity.AMEntityRegistry;
 import fuzs.illagerinvasion.init.ModEntityTypes;
 import net.mcreator.brazillegends.init.BrazilLegendsModEntities;
 import net.minecraft.core.BlockPos;
@@ -85,11 +87,11 @@ public class MobSpawnEventEdits {
     static class CataclysmEdit {
         @SubscribeEvent
         public void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
-            event.register((EntityType) ModEntities.DRAUGR.get(), SpawnPlacementTypes.ON_GROUND,
+            event.register(ModEntities.DRAUGR.get(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkMonsterSpawnRules, Operation.REPLACE);
-            event.register((EntityType) ModEntities.ELITE_DRAUGR.get(), SpawnPlacementTypes.ON_GROUND,
+            event.register(ModEntities.ELITE_DRAUGR.get(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkMonsterSpawnRules, Operation.REPLACE);
-            event.register((EntityType) ModEntities.ROYAL_DRAUGR.get(), SpawnPlacementTypes.ON_GROUND,
+            event.register(ModEntities.ROYAL_DRAUGR.get(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkMonsterSpawnRules, Operation.REPLACE);
         }
     }
@@ -97,13 +99,13 @@ public class MobSpawnEventEdits {
     static class LegendsEdit {
         @SubscribeEvent
         public void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
-            event.register((EntityType) BrazilLegendsModEntities.CUCA.get(), SpawnPlacementTypes.ON_GROUND,
+            event.register(BrazilLegendsModEntities.CUCA.get(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkMonsterSpawnRules, Operation.REPLACE);
-            event.register((EntityType) BrazilLegendsModEntities.CAPELOBO.get(), SpawnPlacementTypes.ON_GROUND,
+            event.register(BrazilLegendsModEntities.CAPELOBO.get(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkMonsterSpawnRules, Operation.REPLACE);
-            event.register((EntityType) BrazilLegendsModEntities.MAPINGUARI.get(), SpawnPlacementTypes.ON_GROUND,
+            event.register(BrazilLegendsModEntities.MAPINGUARI.get(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkMonsterSpawnRules, Operation.REPLACE);
-            event.register((EntityType) BrazilLegendsModEntities.MAPINGUARY.get(), SpawnPlacementTypes.ON_GROUND,
+            event.register(BrazilLegendsModEntities.MAPINGUARY.get(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkMonsterSpawnRules, Operation.REPLACE);
         }
     }
@@ -111,12 +113,20 @@ public class MobSpawnEventEdits {
     static class IllagerEdit {
         @SubscribeEvent
         public void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
-            event.register((EntityType) ModEntityTypes.NECROMANCER_ENTITY_TYPE.value(), SpawnPlacementTypes.ON_GROUND,
+            event.register(ModEntityTypes.NECROMANCER_ENTITY_TYPE.value(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkIllagerSpawnRules, Operation.REPLACE);
-            event.register((EntityType) ModEntityTypes.FIRECALLER_ENTITY_TYPE.value(), SpawnPlacementTypes.ON_GROUND,
+            event.register(ModEntityTypes.FIRECALLER_ENTITY_TYPE.value(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkIllagerSpawnRules, Operation.REPLACE);
-            event.register((EntityType) ModEntityTypes.ALCHEMIST_ENTITY_TYPE.value(), SpawnPlacementTypes.ON_GROUND,
+            event.register(ModEntityTypes.ALCHEMIST_ENTITY_TYPE.value(), SpawnPlacementTypes.ON_GROUND,
                     Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkIllagerSpawnRules, Operation.REPLACE);
+        }
+    }
+
+    static class AlexEdit {
+        @SubscribeEvent
+        public void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
+            event.register(AMEntityRegistry.MURMUR.get(), SpawnPlacementTypes.ON_GROUND,
+                    Types.MOTION_BLOCKING_NO_LEAVES, MobSpawnEventEdits::checkMonsterSpawnRules, Operation.REPLACE);
         }
     }
 

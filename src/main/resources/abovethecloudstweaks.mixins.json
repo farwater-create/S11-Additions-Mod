@@ -4,6 +4,8 @@
   "package": "net.spudacious5705.abovethecloudstweaks.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "AdvancedWeatherFix",
+    "AlexMurmur",
     "CatagoryDespawnDistModifier",
     "Despawn",
     "Elytra",
@@ -18,8 +20,7 @@
     "PersistenceAccesssor",
     "PlayerListTpTracker",
     "PlayerTpTracker",
-    "Portal",
-    "AdvancedWeatherFix"
+    "Portal"
   ],
   "client": [
   ],
