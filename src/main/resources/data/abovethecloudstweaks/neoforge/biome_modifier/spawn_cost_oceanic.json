@@ -5,12 +5,10 @@
     "cataclysm:lionfish",
     "cataclysm:deepling_warlock",
     "cataclysm:deepling_brute",
-    "cataclysm:deepling_angler",
-    "cataclysm:deepling",
-    "alexsmobs:guster"
+    "cataclysm:deepling"
   ],
   "spawn_cost": {
     "energy_budget": 8.0,
-    "charge": 7.8
+    "charge": 8.4
   }
 }
