@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_spawn_costs",
+  "biomes": "#abovethecloudstweaks:is_land",
+  "entity_types": [
+    "alexsmobs:rocky_roller",
+    "alexsmobs:guster"
+  ],
+  "spawn_cost": {
+    "energy_budget": 16.0,
+    "charge": 28.0
+  }
+}

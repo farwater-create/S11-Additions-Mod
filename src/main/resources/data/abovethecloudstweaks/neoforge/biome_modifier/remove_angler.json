@@ -1,5 +1,5 @@
 {
-  "type": "neoforge:add_spawn_costs",
+  "type": "neoforge:remove_spawns",
   "biomes": [
     "minecraft:ocean",
     "minecraft:deep_cold_ocean",
@@ -10,13 +10,6 @@
     "minecraft:warm_ocean"
   ],
   "entity_types": [
-    "cataclysm:lionfish",
-    "cataclysm:deepling_warlock",
-    "cataclysm:deepling_brute",
-    "cataclysm:deepling"
-  ],
-  "spawn_cost": {
-    "energy_budget": 8.0,
-    "charge": 10.0
-  }
+    "cataclysm:deepling_angler"
+  ]
 }

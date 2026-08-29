@@ -39,6 +39,12 @@
       "maxCount": 1
     },
     {
+      "type": "alexsmobs:rocky_roller",
+      "weight": 20,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
       "type": "brazil_legends:capelobo",
       "weight": 6,
       "minCount": 1,
