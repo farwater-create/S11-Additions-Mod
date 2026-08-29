@@ -32,6 +32,20 @@ public class ATCTCommands {
                 Commands.literal("exit_dimension")
                         .executes(TeleportBackToSpawn)
         );
+
+        event.getDispatcher().register(
+                Commands.literal("spawn")
+                        .executes(ToHub)
+        );
+
+        event.getDispatcher().register(
+                Commands.literal("gitpull")
+                        .requires(source -> source.hasPermission(4)) // Require OP level 4
+                        .executes(context -> {
+                            GitPullCommand.runGitPull(context.getSource());
+                            return 1;
+                        })
+        );
     }
 
     private static final Command<CommandSourceStack> TeleportBackToSpawn = new Command<>() {
@@ -76,4 +90,32 @@ public class ATCTCommands {
         }
     };
 
+    private static final Command<CommandSourceStack> ToHub = new Command<>() {
+        @Override
+        public int run(CommandContext<CommandSourceStack> context) {
+            CommandSourceStack source = context.getSource();
+
+            if (!(context.getSource().getEntity() instanceof ServerPlayer player)) {
+                source.sendFailure(Component.literal("This command can only be used by a player."));
+                return 0;
+            }
+
+            ResourceKey<Level> respawnDimension = Level.OVERWORLD;
+            ServerLevel targetLevel = player.server.getLevel(respawnDimension);
+
+            if (targetLevel == null) {
+                source.sendFailure(Component.literal("Error"));
+                return 0;
+            }
+            player.teleportTo(
+                    targetLevel,
+                    0, 185, -10,
+                    player.getYRot(),
+                    player.getXRot()
+            );
+
+            source.sendSuccess(() -> Component.literal("Welcome back!"), true);
+            return 1;
+        }
+    };
 }
