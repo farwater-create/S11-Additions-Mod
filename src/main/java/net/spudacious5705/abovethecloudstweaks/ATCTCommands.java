@@ -38,6 +38,7 @@ public class ATCTCommands {
                         .executes(ToHub)
         );
 
+        /* not for client
         event.getDispatcher().register(
                 Commands.literal("gitpull")
                         .requires(source -> source.hasPermission(4)) // Require OP level 4
@@ -45,7 +46,7 @@ public class ATCTCommands {
                             GitPullCommand.runGitPull(context.getSource());
                             return 1;
                         })
-        );
+        );*/
     }
 
     private static final Command<CommandSourceStack> TeleportBackToSpawn = new Command<>() {
