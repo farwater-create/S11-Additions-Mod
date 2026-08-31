@@ -69,6 +69,7 @@ public class VentBlock extends Block implements EntityBlock, SimpleWaterloggedBl
                 BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_LIGHT_BLUE)
                         .noOcclusion()
+                        .strength(9.0F)
         );
         this.registerDefaultState(this.stateDefinition.any().setValue(BlockStateProperties.WATERLOGGED, false));
     }
