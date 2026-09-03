@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawn_costs",
+  "biomes": [
+    "#abovethecloudstweaks:is_land"
+  ],
+  "entity_types": [
+    "minecraft:pillager",
+    "supplementaries:plunderer"
+  ],
+  "spawn_cost": {
+    "energy_budget": 8.0,
+    "charge": 4.0
+  }
+}
