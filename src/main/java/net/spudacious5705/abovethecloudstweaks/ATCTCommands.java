@@ -39,13 +39,24 @@ public class ATCTCommands {
         );
 
         event.getDispatcher().register(
-                Commands.literal("gitpull")
-                        .requires(source -> source.hasPermission(4)) // Require OP level 4
-                        .executes(context -> {
-                            GitPullCommand.runGitPull(context.getSource());
-                            return 1;
-                        })
+        Commands.literal("git")
+                .requires(source -> source.hasPermission(4)) // Require OP level 4
+
+                .then(Commands.literal("pull")
+                        .then(Commands.literal("kubejs")
+                                .executes(GitCommands::pullKubeJs))
+                        /*.then(Commands.literal("config")
+                                .executes(GitCommands::pullConfig))*/
+                )
+
+                .then(Commands.literal("hardReset")
+                        .then(Commands.literal("kubejs")
+                                .executes(GitCommands::resetKubeJs))
+                        /*.then(Commands.literal("config")
+                                .executes(GitCommands::resetConfig))*/
+                )
         );
+
     }
 
     private static final Command<CommandSourceStack> TeleportBackToSpawn = new Command<>() {
