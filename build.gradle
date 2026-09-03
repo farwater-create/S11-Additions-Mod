@@ -117,8 +117,6 @@ dependencies {
     implementation files("run/mods/alexsmobs-1.22.17.jar")
     implementation files("run/mods/dimthread-NEOFORGE-mc1.21.1-v1.2.1.jar")
     implementation files("run/mods/advancedweather-0.1.2.jar")
-    implementation files("run/mods/coreprotectneo-1.0.jar")
-    implementation files("run/mods/lootr-neoforge-1.21.1-1.11.37.122.jar")
 
     //for advanced weather mixin
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
