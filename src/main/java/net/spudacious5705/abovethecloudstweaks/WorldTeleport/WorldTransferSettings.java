@@ -28,6 +28,11 @@ public record WorldTransferSettings(
             ResourceLocation.fromNamespaceAndPath("ddu", "ddu")
     );
 
+    public static final ResourceKey<Level> LevelOverworld2 = ResourceKey.create(
+            Registries.DIMENSION,
+            ResourceLocation.fromNamespaceAndPath("farwater_s11", "overworld_2")
+    );
+
 
     public static WorldTransferSettings getTransferSettings(Level level){
         var currentDim = level.dimension();
@@ -36,6 +41,7 @@ public record WorldTransferSettings(
         if(currentDim == Level.OVERWORLD) return Overworld;
         if(currentDim == LevelDDU) return DDU;
         if(currentDim == Level.NETHER) return Nether;
+        if(currentDim == LevelOverworld2) return Overworld_2;
         return NULL;
 
     }
@@ -148,6 +154,11 @@ public record WorldTransferSettings(
             Integer.MAX_VALUE, new RescuePortal(512, Level.OVERWORLD),
             8, new TransferPortal(LevelDDU, 108, 90, false),
             "OVERWORLD", 0);
+
+    public static WorldTransferSettings Overworld_2 = new WorldTransferSettings(
+            Integer.MAX_VALUE, new RescuePortal(512, Level.OVERWORLD),
+            8, new TransferPortal(LevelDDU, 108, 90, false),
+            "OVERWORLD_2", 0);
 
     public static WorldTransferSettings DDU = new WorldTransferSettings(
             110, new TransferPortal(Level.OVERWORLD, 28, 8, true),
