@@ -47,7 +47,6 @@ public class ATCTCommands {
 
         event.getDispatcher().register(
                 Commands.literal("switch_overworld")
-                        .requires(source -> source.hasPermission(4))//todo remove
                         .executes(SwitchOverworld)
         );
 

@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,6 +30,7 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.registries.*;
 import net.spudacious5705.abovethecloudstweaks.WorldTeleport.CameraOverlay;
 import net.spudacious5705.abovethecloudstweaks.WorldTeleport.WorldTransferSettings;
@@ -231,5 +233,22 @@ public class Abovethecloudstweaks {
     public static void switchHomeOverworld(ServerPlayer player){
         boolean homeWorld = ! player.getData(PLAYER_HOME_WORLD);
         player.setData(PLAYER_HOME_WORLD, homeWorld);
+    }
+
+        @SubscribeEvent
+    public static void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
+        if (event.getEntity() instanceof ServerPlayer player) {
+            boolean hasJoinedBefore = player.getStats().getValue(Stats.CUSTOM.get(Stats.PLAY_TIME)) > 0;
+
+            switchHomeOverworld(player);
+
+            if (!hasJoinedBefore) {
+                ServerLevel targetLevel = player.getServer().getLevel(WorldTransferSettings.LevelOverworld2);
+
+                if (targetLevel != null) {
+                    player.teleportTo(targetLevel, 0, 185, -10, player.getYRot(), player.getXRot());
+                }
+            }
+        }
     }
 }
