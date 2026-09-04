@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "for the 2nd overworld",
+    "pack_format": 48,
+    "supported_formats": {
+      "max_inclusive": 105,
+      "min_inclusive": 0
+    }
+  }
+}
