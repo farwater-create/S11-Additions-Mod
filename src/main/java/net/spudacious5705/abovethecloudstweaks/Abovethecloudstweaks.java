@@ -1,14 +1,19 @@
 package net.spudacious5705.abovethecloudstweaks;
 
 
+import com.mojang.serialization.Codec;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
@@ -19,15 +24,14 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.*;
 import net.spudacious5705.abovethecloudstweaks.WorldTeleport.CameraOverlay;
+import net.spudacious5705.abovethecloudstweaks.WorldTeleport.WorldTransferSettings;
 import net.spudacious5705.abovethecloudstweaks.particles.*;
 import org.jetbrains.annotations.NotNull;
 
@@ -96,6 +100,16 @@ public class Abovethecloudstweaks {
     public static final DeferredHolder<MobEffect, MobEffect> LAUNCH_EFFECT =
             MOB_EFFECTS.register("launched", LaunchEffect::sup);
 
+    public static final DeferredRegister<AttachmentType<?>> PLAYER_ATTACHMENTS =
+            DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, MODID);
+    public static final Supplier<AttachmentType<Boolean>> PLAYER_HOME_WORLD = PLAYER_ATTACHMENTS.register(
+            "home_world",
+            () -> AttachmentType.builder(() -> false)
+                    .serialize(Codec.BOOL)
+                    .copyOnDeath()
+                    .build()
+    );
+
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES =
         DeferredRegister.create(BuiltInRegistries.PARTICLE_TYPE, MODID);
 
@@ -134,6 +148,8 @@ public class Abovethecloudstweaks {
         MOB_EFFECTS.register(modEventBus);
 
         PARTICLE_TYPES.register(modEventBus);
+
+        PLAYER_ATTACHMENTS.register(modEventBus);
 
         modEventBus.addListener(this::loadComplete);
 
@@ -204,5 +220,16 @@ public class Abovethecloudstweaks {
         public static void onServerStarting(FMLLoadCompleteEvent event) {
             CameraOverlay.clientLoaded();
         }*/
+    }
+
+    public static ServerLevel getHomeOverworld(ServerPlayer player){
+        boolean homeWorld = player.getData(PLAYER_HOME_WORLD);
+        ResourceKey<Level> targDim = homeWorld ? WorldTransferSettings.LevelOverworld2 : Level.OVERWORLD;
+        return player.server.getLevel(targDim);
+    }
+
+    public static void switchHomeOverworld(ServerPlayer player){
+        boolean homeWorld = ! player.getData(PLAYER_HOME_WORLD);
+        player.setData(PLAYER_HOME_WORLD, homeWorld);
     }
 }

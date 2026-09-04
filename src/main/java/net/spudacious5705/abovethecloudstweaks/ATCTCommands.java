@@ -23,19 +23,32 @@ public class ATCTCommands {
             Level.OVERWORLD,
             Level.NETHER,
             Level.END,
-            WorldTransferSettings.LevelDDU
+            WorldTransferSettings.LevelDDU,
+            WorldTransferSettings.LevelOverworld2
     );
+
+    private static final Set<ResourceKey<Level>> OVERWORLD_DIMENSIONS = Set.of(
+            Level.OVERWORLD,
+            WorldTransferSettings.LevelOverworld2
+    );
+
 
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         event.getDispatcher().register(
                 Commands.literal("exit_dimension")
-                        .executes(TeleportBackToSpawn)
+                        .executes(ExitBossDimension)
         );
 
         event.getDispatcher().register(
                 Commands.literal("spawn")
                         .executes(ToHub)
+        );
+
+        event.getDispatcher().register(
+                Commands.literal("switch_overworld")
+                        .requires(source -> source.hasPermission(4))//todo remove
+                        .executes(SwitchOverworld)
         );
 
         event.getDispatcher().register(
@@ -59,7 +72,7 @@ public class ATCTCommands {
 
     }
 
-    private static final Command<CommandSourceStack> TeleportBackToSpawn = new Command<>() {
+    private static final Command<CommandSourceStack> ExitBossDimension = new Command<>() {
         @Override
         public int run(CommandContext<CommandSourceStack> context) {
             CommandSourceStack source = context.getSource();
@@ -111,13 +124,13 @@ public class ATCTCommands {
                 return 0;
             }
 
-            ResourceKey<Level> respawnDimension = Level.OVERWORLD;
-            ServerLevel targetLevel = player.server.getLevel(respawnDimension);
+            ServerLevel targetLevel = Abovethecloudstweaks.getHomeOverworld(player);
 
             if (targetLevel == null) {
                 source.sendFailure(Component.literal("Error"));
                 return 0;
             }
+
             player.teleportTo(
                     targetLevel,
                     0, 185, -10,
@@ -126,6 +139,32 @@ public class ATCTCommands {
             );
 
             source.sendSuccess(() -> Component.literal("Welcome back!"), true);
+            return 1;
+        }
+    };
+
+
+    private static final Command<CommandSourceStack> SwitchOverworld = new Command<>() {
+        @Override
+        public int run(CommandContext<CommandSourceStack> context) {
+            CommandSourceStack source = context.getSource();
+
+            if (!(context.getSource().getEntity() instanceof ServerPlayer player)) {
+                source.sendFailure(Component.literal("This command can only be used by a player."));
+                return 0;
+            }
+
+            Abovethecloudstweaks.switchHomeOverworld(player);
+
+            ResourceKey<Level> currentDimension = player.serverLevel().dimension();
+            if (!OVERWORLD_DIMENSIONS.contains(currentDimension)) {
+                source.sendSuccess(() -> Component.literal("Home Overworld Switched! \n   Can only teleport whilst in an Overworld"), false);
+                return 1;
+            }
+
+            WorldTransferSettings.switchOverworlds(player);
+
+            source.sendSuccess(() -> Component.literal("Switching Overworlds..."), true);
             return 1;
         }
     };
